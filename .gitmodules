@@ -1,0 +1,3 @@
+[submodule "preamble"]
+	path = preamble
+	url = git://gist.github.com/835.git
