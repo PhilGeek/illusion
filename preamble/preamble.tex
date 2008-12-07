@@ -1,0 +1,52 @@
+% Packages
+\usepackage{geometry} \geometry{a4paper} 
+\usepackage{url}
+\usepackage{txfonts}
+\usepackage{color}
+\definecolor{gray}{rgb}{0.459,0.438,0.471}
+% \usepackage{setspace}
+% \doublespace % Uncomment for doublespacing if necessary
+\usepackage{epigraph} % optional
+
+% XeTeX
+\usepackage[cm-default]{fontspec}
+\usepackage{xltxtra,xunicode}
+\defaultfontfeatures{Scale=MatchLowercase,Mapping=tex-text}
+\setmainfont{Hoefler Text}
+\setsansfont{Gill Sans}
+\setmonofont{Inconsolata}
+
+% Section Formatting
+\usepackage[]{titlesec}
+\titleformat{\section}[hang]{\fontsize{14}{14}\scshape}{\S{\thesection}}{.5em}{}{}
+\titleformat{\subsection}[hang]{\fontsize{12}{12}\scshape}{\S{\thesubsection}}{.5em}{}{}
+\titleformat{\subsubsection}[hang]{\fontsize{12}{12}\scshape}{\S{\thesubsubsection}}{.5em}{}{}
+
+% Headers and Footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\lhead{\thepage}
+\chead{}
+\rhead{\itshape{\nouppercase{\leftmark}}}
+
+% TODO List
+\usepackage{color}
+\usepackage{index} % use index package to create indices
+\newindex{todo}{tod}{tnd}{TODO List} % start todo list
+\newindex{fixme}{fix}{fnd}{FIXME List} % start fixme list
+\newcommand{\todo}[1]{\textcolor{blue}{TODO: #1}\index[todo]{#1}} % macro for todo entries
+\newcommand{\fixme}[1]{\textcolor{red}{FIXME: #1}\index[fixme]{#1}} % macro for fixme entries
+
+% Bibliography
+\usepackage[round]{natbib} 
+
+% Title Information
+\title{\mytitle} % For thanks comment this line and uncomment the line below
+%\title{\mytitle\thanks{}}% 
+\author{\myauthor} 
+% \date{} % Leave blank for no date, comment out for most recent date
+
+% PDF Stuff
+\usepackage[plainpages=false, pdfpagelabels, bookmarksnumbered, backref, pdftitle={\mytitle}, pagebackref, pdfauthor={\myauthor}, pdfkeywords={\mykeywords}, xetex, dvipdfmx, colorlinks=true, citecolor=gray, linkcolor=gray, urlcolor=gray]{hyperref} 
+
